@@ -26,13 +26,15 @@ for (let i = 0; i < pads.length; i++) {
     kick.play();
   });
 }
-
+// key codes for keydown event listener
 const keyCodes = ["j", "i", "k", "o", "p", "l", "J", "I", "K", "O", "P", "L"];
 
 document.addEventListener("keydown", function (event) {
   let key = event.key;
   let index = keyCodes.indexOf(key);
 
+
+//   loops thru the kicks and assigns them to the corresponding key presses both upper and lower case.
   if (index >= 0) {
     let kick = kicks["kick" + ((index % 6) + 1)];
     kick.currentTime = 0;
